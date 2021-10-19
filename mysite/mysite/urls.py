@@ -23,6 +23,7 @@ import book_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dogs/list/', dog.Dog.list_dogs),
+    path('dogs/add/', dog.Dog.add_dog),
     path('unknownhandler/', re.compile), # an example for a view method that cannot be resolved
     path('delete_book/', book_views.delete_book),
     path('get_books/', book_views.Library.get_books)
