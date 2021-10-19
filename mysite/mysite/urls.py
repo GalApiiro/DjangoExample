@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Animals import dog
+import re
+import book_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dogs/list', dog.Dog.list_dogs)
+    path('dogs/list/', dog.Dog.list_dogs),
+    path('unknownhandler/', re.compile), # an example for a view method that cannot be resolved
+    path('delete_book/', book_views.delete_book),
+    path('get_books/', book_views.Library.get_books)
 ]
