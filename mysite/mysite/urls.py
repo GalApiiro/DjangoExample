@@ -18,7 +18,7 @@ from django.urls import path
 from Animals import dog
 import re
 import book_views
-
+import some_apiview_class
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +26,6 @@ urlpatterns = [
     path('dogs/add/', dog.Dog.add_dog),
     path('unknownhandler/', re.compile), # an example for a view method that cannot be resolved
     path('delete_book/', book_views.delete_book),
-    path('get_books/', book_views.Library.get_books)
+    path('get_books/', book_views.Library.get_books),
+    path('some_apiview_routes/', some_apiview_class.SomeApiView.as_view())
 ]
