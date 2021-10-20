@@ -19,6 +19,7 @@ from Animals import dog
 import re
 import book_views
 import some_apiview_class
+import Animals.Birds.dove
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('unknownhandler/', re.compile), # an example for a view method that cannot be resolved
     path('delete_book/', book_views.delete_book),
     path('get_books/', book_views.Library.get_books),
-    path('some_apiview_routes/', some_apiview_class.SomeApiView.as_view())
+    path('some_apiview_routes/', some_apiview_class.SomeApiView.as_view()),
+    path('doves/', Animals.Birds.dove.Dove.get_doves)
 ]
