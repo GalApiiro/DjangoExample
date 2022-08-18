@@ -1,4 +1,4 @@
 djangorestframework>=3.12.4
 Django>=3.2.8
-dummy=1.2.3
-mock=3.4.5
+dummy==1.2.3
+mock==3.4.5
